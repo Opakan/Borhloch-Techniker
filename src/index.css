@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #000B26;
+  --color-electric-blue: #0055FF;
+  --color-silver: #A9B2C3;
+  --color-glass: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  }
+  
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-3xl border border-white/10 shadow-2xl;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 85, 255, 0.5);
+  }
+}
