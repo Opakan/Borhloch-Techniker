@@ -87,7 +87,7 @@ export function Hero() {
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-silver">Precision Logistics & Real Estate</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-accent font-extrabold leading-[0.85] mb-8 select-none">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-accent font-extrabold leading-[0.85] mb-8 select-none">
             BUILDING THE <br />
             <span className="text-gradient">FUTURE</span> OF <br />
             COMMERCE.
@@ -170,7 +170,7 @@ export function Services() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-accent font-extrabold"
+          className="text-4xl md:text-6xl font-accent font-extrabold"
         >
           MULTI-DIVISIONAL <br /> <span className="text-silver/30 italic">EXCELLENCE.</span>
         </motion.h2>
@@ -241,7 +241,7 @@ export function Properties() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
           <div>
-            <h2 className="text-5xl md:text-7xl font-accent font-extrabold mb-6">PREMIUM <br /> PROPERTIES.</h2>
+            <h2 className="text-4xl md:text-6xl font-accent font-extrabold mb-6">PREMIUM <br /> PROPERTIES.</h2>
           </div>
           <p className="text-silver/40 max-w-sm text-xs font-bold uppercase tracking-[0.2em] leading-loose">
             A curated portfolio of ultra-luxury assets and high-efficiency commercial hubs.
@@ -326,7 +326,7 @@ export function About() {
         <div className="flex flex-col gap-12">
           <div>
               <span className="text-accent-pink font-bold text-xs uppercase tracking-[0.4em] mb-4 block">Legacy & Vision</span>
-              <h2 className="text-6xl md:text-8xl font-accent font-extrabold mb-8 italic leading-none">THE BTC <br /><span className="text-gradient">STANDARD.</span></h2>
+              <h2 className="text-5xl md:text-7xl font-accent font-extrabold mb-8 italic leading-none">THE BTC <br /><span className="text-gradient">STANDARD.</span></h2>
               <p className="text-silver/50 text-xl font-light leading-relaxed">
                 Borhloch Techniker Company Ltd. is more than a logistics firm. We are architects of efficiency, leveraging modern technology to redefine property management and supply chain logistics in Nigeria.
               </p>
@@ -352,7 +352,7 @@ export function Location() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="flex flex-col gap-8">
-                <h2 className="text-5xl md:text-7xl font-accent font-extrabold leading-none">FIND US IN <br /> <span className="text-accent-gold">LAGOS.</span></h2>
+                <h2 className="text-4xl md:text-6xl font-accent font-extrabold leading-none">FIND US IN <br /> <span className="text-accent-gold">LAGOS.</span></h2>
                 <div className="space-y-12">
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-3 text-silver/40">
@@ -414,7 +414,7 @@ export function Contact() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
           <div>
-            <h2 className="text-5xl md:text-7xl font-accent font-extrabold mb-8 leading-none">CONNECT <br /> TO THE <br /> <span className="text-gradient">NETWORK.</span></h2>
+            <h2 className="text-4xl md:text-6xl font-accent font-extrabold mb-8 leading-none">CONNECT <br /> TO THE <br /> <span className="text-gradient">NETWORK.</span></h2>
             <p className="text-silver/60 text-lg mb-12 font-light leading-relaxed">
                 Start your journey into premium real estate and logistics. Our specialists yield unparalleled results for our partners.
             </p>
