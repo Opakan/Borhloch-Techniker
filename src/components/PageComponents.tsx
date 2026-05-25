@@ -28,9 +28,9 @@ export function Navbar() {
           animate={{ opacity: 1, scale: 1 }}
           className="flex items-center gap-3"
         >
-          <div className="w-12 h-12 bg-gradient-to-br from-accent-cyan to-accent-pink rounded-xl flex items-center justify-center font-black text-2xl text-black shadow-[0_0_30px_rgba(0,240,255,0.3)]">B</div>
+          <div className="w-10 h-10 md:w-11 md:h-11 bg-gradient-to-br from-accent-cyan to-accent-pink rounded-xl flex items-center justify-center font-black text-xl md:text-2xl text-black shadow-[0_0_30px_rgba(0,240,255,0.3)]">B</div>
           <div className="flex flex-col">
-            <span className="font-accent font-extrabold text-2xl tracking-tighter leading-none">BTC <span className="text-accent-cyan">LOGISTICS</span></span>
+            <span className="font-accent font-extrabold text-lg md:text-xl tracking-tighter leading-none">BTC <span className="text-accent-cyan">LOGISTICS</span></span>
             <span className="text-[8px] uppercase tracking-[0.4em] font-medium text-silver/60">Borhloch Techniker</span>
           </div>
         </motion.div>
@@ -87,28 +87,28 @@ export function Hero() {
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-silver">Precision Logistics & Real Estate</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-accent font-extrabold leading-[0.85] mb-8 select-none">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-accent font-extrabold leading-[0.95] sm:leading-[0.9] lg:leading-[0.85] mb-6 select-none">
             BUILDING THE <br />
             <span className="text-gradient">FUTURE</span> OF <br />
             COMMERCE.
           </h1>
           
-          <p className="text-silver/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-silver/60 text-sm sm:text-base md:text-lg mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light px-4">
              Borhloch Techniker Company Ltd. (BTC Logistics) bridges the gap between infrastructure and efficiency across Nigeria.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 px-4">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-white text-black font-black text-xs uppercase tracking-[0.2em] rounded-2xl shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:bg-accent-cyan transition-colors"
+              className="px-6 py-3.5 sm:px-10 sm:py-4.5 bg-white text-black font-black text-2xs sm:text-xs uppercase tracking-[0.2em] rounded-2xl shadow-[0_15px_30px_rgba(255,255,255,0.1)] hover:bg-accent-cyan transition-colors"
             >
               Explore Assets
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-white/5 backdrop-blur-xl border border-white/10 font-bold text-xs uppercase tracking-[0.2em] rounded-2xl hover:bg-white/10 transition-colors"
+              className="px-6 py-3.5 sm:px-10 sm:py-4.5 bg-white/5 backdrop-blur-xl border border-white/10 font-bold text-2xs sm:text-xs uppercase tracking-[0.2em] rounded-2xl hover:bg-white/10 transition-colors"
             >
               Partner with us
             </motion.button>
@@ -170,13 +170,13 @@ export function Services() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-accent font-extrabold"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-accent font-extrabold"
         >
           MULTI-DIVISIONAL <br /> <span className="text-silver/30 italic">EXCELLENCE.</span>
         </motion.h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {settings.map((s, i) => (
           <motion.div 
             key={i}
@@ -185,17 +185,17 @@ export function Services() {
             transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
             className={cn(
-                "group p-10 h-[450px] flex flex-col justify-between border border-white/5 transition-all duration-500",
+                "group p-6 md:p-8 min-h-[340px] md:h-[400px] flex flex-col justify-between border border-white/5 transition-all duration-500",
                 "bg-gradient-to-b hover:bg-white/5 hover:border-white/20"
             )}
           >
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
                 <div className="text-silver/40 group-hover:text-white transition-colors">
                     {s.icon}
                 </div>
                 <div>
-                    <h3 className="text-3xl font-accent font-bold mb-4">{s.title}</h3>
-                    <p className="text-silver/50 leading-relaxed font-light line-clamp-3">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-accent font-bold mb-3">{s.title}</h3>
+                    <p className="text-silver/50 text-xs sm:text-sm leading-relaxed font-light line-clamp-3">
                         {s.desc}
                     </p>
                 </div>
@@ -203,7 +203,7 @@ export function Services() {
             
             <motion.div 
                 whileHover={{ x: 10 }}
-                className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-accent-cyan cursor-pointer"
+                className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-accent-cyan cursor-pointer mt-4"
             >
                 Learn More <ArrowRight className="w-4 h-4" />
             </motion.div>
@@ -226,7 +226,7 @@ export function Properties() {
       title: "Azure Business Hub",
       tag: "Commercial",
       price: "Inquire",
-      img: "https://picsum.photos/800/1000?seed=biz1"
+      img: lagosSkylineImg
     },
     {
       title: "Empire Logistics Park",
@@ -237,11 +237,11 @@ export function Properties() {
   ];
 
   return (
-    <section id="properties" className="py-40 bg-[#050505]">
+    <section id="properties" className="py-24 sm:py-32 md:py-40 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6 md:gap-8">
           <div>
-            <h2 className="text-4xl md:text-6xl font-accent font-extrabold mb-6">PREMIUM <br /> PROPERTIES.</h2>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-accent font-extrabold mb-4 md:mb-6">PREMIUM <br /> PROPERTIES.</h2>
           </div>
           <p className="text-silver/40 max-w-sm text-xs font-bold uppercase tracking-[0.2em] leading-loose">
             A curated portfolio of ultra-luxury assets and high-efficiency commercial hubs.
@@ -253,27 +253,27 @@ export function Properties() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="group relative h-[600px] overflow-hidden cursor-pointer bg-white/5"
+              className="group relative h-[380px] sm:h-[450px] md:h-[500px] overflow-hidden cursor-pointer bg-white/5 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500"
             >
               <img 
                 src={p.img} 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" 
+                className="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-105" 
                 alt={p.title}
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
               
-              <div className="absolute inset-0 p-10 flex flex-col justify-between">
+              <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between z-10">
                 <div className="flex justify-between items-start">
-                    <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[8px] font-black uppercase tracking-widest text-white">{p.tag}</span>
-                    <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-white transition-colors" />
+                    <span className="px-3 py-1 bg-black/50 border border-white/10 backdrop-blur-md rounded-full text-[8px] font-black uppercase tracking-widest text-white">{p.tag}</span>
+                    <ExternalLink className="w-4 h-4 text-white hover:text-accent-cyan transition-colors" />
                 </div>
                 
                 <div>
-                   <h3 className="text-3xl font-accent font-bold mb-2 group-hover:text-accent-cyan transition-colors">{p.title}</h3>
-                   <div className="flex items-center gap-4">
-                        <div className="w-12 h-[1px] bg-white/20" />
-                        <span className="text-silver/60 text-xs font-bold font-mono tracking-tighter">{p.price}</span>
+                   <h3 className="text-lg sm:text-xl lg:text-2xl font-accent font-bold mb-2 group-hover:text-accent-cyan transition-colors">{p.title}</h3>
+                   <div className="flex items-center gap-3">
+                        <div className="w-8 h-[1px] bg-white/20" />
+                        <span className="text-silver/60 text-[11px] font-bold font-mono tracking-tighter">{p.price}</span>
                    </div>
                 </div>
               </div>
@@ -302,10 +302,10 @@ export function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             className="relative"
           >
-            <div className="aspect-[4/5] overflow-hidden rounded-[40px] grayscale hover:grayscale-0 transition-all duration-1000 border border-white/5">
+            <div className="aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 relative shadow-2xl">
                 <img 
                     src={corporateTeamImg} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-700" 
                     alt="Corporate intensity"
                     referrerPolicy="no-referrer"
                 />
@@ -323,20 +323,20 @@ export function About() {
           </motion.div>
         </div>
         
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-8 md:gap-12">
           <div>
-              <span className="text-accent-pink font-bold text-xs uppercase tracking-[0.4em] mb-4 block">Legacy & Vision</span>
-              <h2 className="text-5xl md:text-7xl font-accent font-extrabold mb-8 italic leading-none">THE BTC <br /><span className="text-gradient">STANDARD.</span></h2>
-              <p className="text-silver/50 text-xl font-light leading-relaxed">
+              <span className="text-accent-pink font-bold text-xs uppercase tracking-[0.4em] mb-3 block">Legacy & Vision</span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-accent font-extrabold mb-6 italic leading-tight">THE BTC <br /><span className="text-gradient">STANDARD.</span></h2>
+              <p className="text-silver/50 text-base sm:text-lg leading-relaxed font-light">
                 Borhloch Techniker Company Ltd. is more than a logistics firm. We are architects of efficiency, leveraging modern technology to redefine property management and supply chain logistics in Nigeria.
               </p>
           </div>
           
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-3 gap-6 md:gap-12">
             {stats.map((s, i) => (
               <div key={i} className="flex flex-col">
-                <span className="text-4xl font-accent font-black mb-2 text-white">{s.value}</span>
-                <span className="text-[9px] uppercase tracking-[0.3em] text-accent-cyan font-bold">{s.label}</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-accent font-black mb-1 text-white">{s.value}</span>
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-accent-cyan font-bold">{s.label}</span>
               </div>
             ))}
           </div>
@@ -348,26 +348,26 @@ export function About() {
 
 export function Location() {
   return (
-    <section className="py-40 bg-black relative overflow-hidden">
+    <section className="py-24 sm:py-32 md:py-40 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="flex flex-col gap-8">
-                <h2 className="text-4xl md:text-6xl font-accent font-extrabold leading-none">FIND US IN <br /> <span className="text-accent-gold">LAGOS.</span></h2>
-                <div className="space-y-12">
-                    <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="flex flex-col gap-6 md:gap-8">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-accent font-extrabold leading-none">FIND US IN <br /> <span className="text-accent-gold">LAGOS.</span></h2>
+                <div className="space-y-6 md:space-y-12">
+                    <div className="flex flex-col gap-2 md:grid md:grid-cols-1">
                         <div className="flex items-center gap-3 text-silver/40">
                             <Clock className="w-4 h-4" />
                             <span className="text-[10px] font-bold uppercase tracking-widest">Business hours</span>
                         </div>
-                        <p className="text-2xl font-display font-bold">Open Daily until 5:00 PM</p>
+                        <p className="text-lg sm:text-2xl font-display font-bold">Open Daily until 5:00 PM</p>
                     </div>
                     
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2 md:grid md:grid-cols-1">
                         <div className="flex items-center gap-3 text-silver/40">
                             <Home className="w-4 h-4" />
                             <span className="text-[10px] font-bold uppercase tracking-widest">Headquarters</span>
                         </div>
-                        <p className="text-2xl font-display font-medium text-silver leading-relaxed">
+                        <p className="text-lg sm:text-2xl font-display font-medium text-silver leading-relaxed">
                             Suite 8, Choice Silver Plaza,<br />
                             19 Ereke Avenue, Berger, Lagos.
                         </p>
@@ -383,7 +383,7 @@ export function Location() {
                 >
                     <img 
                         src={lagosSkylineImg} 
-                        className="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-[20s]" 
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[20s]" 
                         alt="Lagos location"
                         referrerPolicy="no-referrer"
                     />
@@ -414,8 +414,8 @@ export function Contact() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
           <div>
-            <h2 className="text-4xl md:text-6xl font-accent font-extrabold mb-8 leading-none">CONNECT <br /> TO THE <br /> <span className="text-gradient">NETWORK.</span></h2>
-            <p className="text-silver/60 text-lg mb-12 font-light leading-relaxed">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-accent font-extrabold mb-6 leading-none">CONNECT <br /> TO THE <br /> <span className="text-gradient">NETWORK.</span></h2>
+            <p className="text-silver/60 text-base sm:text-lg mb-8 md:mb-12 font-light leading-relaxed">
                 Start your journey into premium real estate and logistics. Our specialists yield unparalleled results for our partners.
             </p>
             
@@ -436,20 +436,20 @@ export function Contact() {
             </div>
           </div>
           
-          <div className="flex flex-col gap-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" className="bg-white/5 border-b border-white/10 p-6 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium" placeholder="Identity" />
-                <input type="tel" className="bg-white/5 border-b border-white/10 p-6 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium" placeholder="Communication Node (Phone)" />
+          <div className="flex flex-col gap-5 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <input type="text" className="bg-white/5 border-b border-white/10 p-4 md:p-5 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium text-sm text-white" placeholder="Identity" />
+                <input type="tel" className="bg-white/5 border-b border-white/10 p-4 md:p-5 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium text-sm text-white" placeholder="Communication Node (Phone)" />
             </div>
-            <select className="bg-white/5 border-b border-white/10 p-6 focus:border-accent-cyan outline-none transition-all text-silver/40">
-                <option className="bg-black">Operational Sector</option>
-                <option className="bg-black">Premium Real Estate</option>
-                <option className="bg-black">Enterprise Logistics</option>
-                <option className="bg-black">Digital Asset Management</option>
+            <select className="bg-white/5 border-b border-white/10 p-4 md:p-5 focus:border-accent-cyan outline-none transition-all text-sm text-silver/60">
+                <option className="bg-black text-white">Operational Sector</option>
+                <option className="bg-black text-white">Premium Real Estate</option>
+                <option className="bg-black text-white">Enterprise Logistics</option>
+                <option className="bg-black text-white">Digital Asset Management</option>
             </select>
-            <textarea rows={4} className="bg-white/5 border-b border-white/10 p-6 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium" placeholder="Detailed Inquiry..."></textarea>
+            <textarea rows={4} className="bg-white/5 border-b border-white/10 p-4 md:p-5 focus:border-accent-cyan outline-none transition-all placeholder:text-silver/20 font-medium text-sm text-white" placeholder="Detailed Inquiry..."></textarea>
             
-            <button className="mt-8 h-20 bg-accent-cyan text-black rounded-3xl font-black uppercase tracking-[0.3em] text-xs shadow-[0_0_50px_rgba(0,240,255,0.2)] hover:bg-white transition-colors">
+            <button className="mt-4 md:mt-8 h-14 md:h-18 bg-accent-cyan text-black rounded-2xl font-black uppercase tracking-[0.3em] text-2xs md:text-xs shadow-[0_0_50px_rgba(0,240,255,0.2)] hover:bg-white transition-colors">
                 Transmit Signal
             </button>
           </div>
